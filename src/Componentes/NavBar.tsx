@@ -6,7 +6,9 @@ export default function Navbar(){
     return(
         <nav className="navbar">
             <div className="navbar-lado-logo">
+                <NavLink to ="/">
             <img src={logo} alt="logo" className="navbar-logo" />
+                </NavLink>
             </div>
             <svg className="navbar-diagonal" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon points="0,0 0,100 35,100" fill="white"/>
