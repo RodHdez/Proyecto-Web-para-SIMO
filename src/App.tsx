@@ -11,19 +11,23 @@ import Contacto from './Paginas/Contacto'
 function AppContent() {
   const location = useLocation();
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      {/* Navbar fijo en la parte superior */}
       <NavBar />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/"            element={<Home />}        />
-          <Route path="/Conocenos"   element={<Conocenos />}   />
-          <Route path="/Socios"      element={<Socios />}      />
-          <Route path="/Corporativa" element={<Corporativa />} />
-          <Route path="/Contacto"    element={<Contacto />}    />
-        </Routes>
-      </AnimatePresence>
-    </>
-  )
+      {/* Contenedor de paginas ocupa el resto del espacio */}
+      <div style={{ position: "relative", flex: 1, overflow: "hidden" }}>
+        <AnimatePresence mode="popLayout">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/"            element={<Home />}        />
+            <Route path="/Conocenos"   element={<Conocenos />}   />
+            <Route path="/Socios"      element={<Socios />}      />
+            <Route path="/Corporativa" element={<Corporativa />} />
+            <Route path="/Contacto"    element={<Contacto />}    />
+          </Routes>
+        </AnimatePresence>
+      </div>
+    </div>
+  );
 }
 
 // BrowserRouter envuelve todo para que useLocation funcione dentro de AppContent
