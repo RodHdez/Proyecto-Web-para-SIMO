@@ -1,0 +1,277 @@
+/* Contenedor general de la pagina */
+.conocenos-contenedor {
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* ── Primerizo ── */
+/* Seccion superior con titulo y tarjetas de ubicacion */
+.conocenos-primerizo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    background-color: #d9d9d9;
+    gap: 2rem;
+}
+
+/* Texto Primerizo del lado izquierdo */
+.texto-primerizo {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.titulo-primerizo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.descripcion-primeriza {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Contenedor de las tarjetas de ubicacion */
+.tarjetas-primerizas{
+    display: flex;
+    gap: 1rem;
+}
+
+/* Cada tarjeta de ubicacion */
+.ubicacion-tarjeta {
+    background-color: #FB8103;
+    color: white;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    min-width: 100px;
+    font-weight: 600;
+}
+
+/* Tarjeta central destacada - mas grande */
+.ubicacion-titulo {
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    min-width: 100px;
+    font-weight: 600;
+}
+
+.ubicacion-icono {
+    font-size: 1.5rem;
+}
+
+/* ── GRID DE MISION/VISION/EXPERIENCIA/COMPROMISO ── */
+.conocenos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    gap: 1rem; /* espacio para que las esquinas se vean redondeadas */
+    background-color: #d9d9d9;
+    padding: 1rem;
+}
+
+/* Cada tarjeta del grid */
+.grid-tarjeta {
+    padding: 2.5rem;
+    outline: 2px solid #d9d9d9;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background-color: #ffffff;
+}
+
+.grid-icono {
+    font-size: 1.5rem;
+}
+
+.grid-tarjeta h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.grid-tarjeta p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ── ESTADISTICAS ── */
+/* Barra oscura con los 3 numeros */
+.conocenos-stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 3rem 4rem;
+}
+
+/* Cada estadistica individual */
+.stat {
+    text-align: center;
+    color: white;
+}
+
+.stat h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #FB8103; /* numero en naranja */
+}
+
+.stat p {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* ── VALORES ── */
+/* Seccion oscura con imagen y lista de valores */
+.conocenos-valores {
+    display: flex;
+    background-color: #1a1a1a;
+    min-height: 400px;
+}
+
+/* Placeholder de imagen en la izquierda */
+.valores-imagen {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.valores-imagen-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+/* Lista de valores en la derecha */
+.valores-lista {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: white;
+}
+
+.valores-lista h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Cada valor individual */
+.valor-item {
+    border-left: 2px solid #444;
+    padding-left: 1rem;
+}
+
+.valor-item h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #FB8103; /* titulo del valor en naranja */
+    margin-bottom: 0.3rem;
+}
+
+.valor-item p {
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+/* Valor destacado con boton */
+.valor-item.destacado {
+    border-left: 2px solid #FB8103;
+}
+
+.valor-item.destacado h4 {
+    font-size: 1.2rem;
+}
+
+.valor-item.destacado p {
+    color: #ccc;
+}
+
+/* Boton de ver mas */
+.valores-boton {
+    margin-top: 1rem;
+    background-color: #FB8103;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%); /* paralelogramo igual al resto */
+    transition: opacity 0.2s ease;
+}
+
+.valores-boton:hover {
+    opacity: 0.85;
+}
+
+/* ── FOOTER ── */
+.conocenos-footer {
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 4rem;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #FB8103;
+    margin-bottom: 0.5rem;
+}
+
+.footer-izquierda {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-izquierda p {
+    font-size: 0.85rem;
+    color: #aaa;
+    max-width: 250px;
+}
+
+/* Iconos de redes sociales */
+.footer-redes {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.red-icono {
+    width: 32px;
+    height: 32px;
+    background-color: #333;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+}

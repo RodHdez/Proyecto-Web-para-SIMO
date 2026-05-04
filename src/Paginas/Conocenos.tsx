@@ -1,11 +1,146 @@
 import TransiciondePag from "../Componentes/TransiciondePag";
+import "./Conocenos.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Conocenos() {
+  const navigate = useNavigate();
   return (
     <TransiciondePag>
-    <main>
-      <h1>Cono</h1>
-    </main>
+      <div className="conocenos-contenedor">
+        {/*Seccion Primeriza*/}
+        <section className="conocenos-primerizo">
+        {/*Titulo y Descripcion*/}
+        <div className="texto-primerizo">
+          <h1 className="titulo-primerizo">CONÓCENOS</h1>
+          <p className="descripcion-primeriza">
+              Somos líderes en la gestión de proyectos, transformando ideas
+              innovadoras en resultados tangibles a través de la precisión y
+              la integridad financiera.
+          </p>
+        </div>
+
+        {/*Tarjetas de ubicacion*/}
+        <div className="tarjetas-primerizas">
+          <div className="ubicacion-tarjeta">
+            <span className="ubicacion-icono">📍</span>
+            <p>San Salvador</p>
+            <p>El Salvador</p>
+          </div>
+        <div className="ubicacion-titulo">
+          <p>NUESTRAS</p>
+          <p>SEDES</p>
+        </div>
+        <div className="ubicacion-tarjeta">
+        <span className="ubicacion-icono">📍</span>
+            <p>Quito</p>
+            <p>Ecuador</p>
+        </div>
+        </div>
+        </section>
+
+        {/*Seccion de Mision-Vision */}
+        <section className="conocenos-grid">
+          {/* Tarjeta Mision */}
+          <div className="grid-tarjeta">
+            <span className="grid-icono">🔶</span>
+            <h3>Misión</h3>
+            <p>
+              Empoderar la soberanía de las naciones y la integridad financiera a través de una
+              tecnología que se adapta al ritmo de la intención humana, asegurando que el 
+              progreso digital nunca comprometa la ética ni el planeta.
+            </p>
+          </div>
+
+           {/* Tarjeta Vision */}
+          <div className="grid-tarjeta">
+            <span className="grid-icono">🔶</span>
+            <h3>Visión</h3>
+            <p>
+              Ser el orquestador líder de infraestructuras digitales autónomas en 
+              Latinoamérica, habiendo neutralizado la huella de carbono de nuestros clientes 
+              gubernamentales y establecido el estándar regional de transparencia algorítmica.
+            </p>
+          </div>
+
+          {/* Tarjeta Experiencia */}
+          <div className="grid-tarjeta">
+            <span className="grid-icono">🔶</span>
+            <h3>Experiencia</h3>
+            <p>
+              Más de una década perfeccionando metodologías ágiles y robustas
+              en diversos sectores industriales, garantizando la solvencia técnica 
+              en cada etapa del desarrollo.
+            </p>
+          </div>
+          
+          {/* Tarjeta Compromiso */}
+          <div className="grid-tarjeta">
+            <span className="grid-icono">🔶</span>
+            <h3>Compromiso</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Trabajamos con dedicación para superar las expectativas de
+              nuestros clientes en cada proyecto.
+            </p>
+          </div>
+        </section>
+
+          {/* ── SECCION ESTADISTICAS ── */}
+        <section className="conocenos-stats">
+          <div className="stat">
+            <h2>15+</h2>
+            <p>AÑOS DE EXPERIENCIA</p>
+          </div>
+          <div className="stat">
+            <h2>200+</h2>
+            <p>PROYECTOS EJECUTADOS</p>
+          </div>
+          <div className="stat">
+            <h2>98%</h2>
+            <p>SATISFACCIÓN DEL CLIENTE</p>
+          </div>
+        </section>
+
+          {/* ── SECCION VALORES ── */}
+        <section className="conocenos-valores">
+          {/* Imagen placeholder en la izquierda */}
+          <div className="valores-imagen">
+            <div className="valores-imagen-placeholder" />
+          </div>
+
+          {/* Lista de valores en la derecha */}
+          <div className="valores-lista">
+            <h2>Nuestros valores</h2>
+
+            <div className="valor-item">
+              <h4>Soberanía de Datos</h4>
+              <p>El control total del ciudadano sobre su identidad es innegociable.</p>
+            </div>
+
+            <div className="valor-item">
+              <h4>Transparencia Algorítmica</h4>
+              <p>Cada decisión de IA debe ser auditable y explicable.</p>
+            </div>
+
+            <div className="valor-item">
+              <h4> Resiliencia en Movimiento</h4>
+              <p>Adaptabilidad constante frente a un entorno de amenazas en evolución.</p>
+            </div>
+
+            {/* Valor destacado */}
+            <div className="valor-item destacado">
+              <h4>Pasión por la Precisión</h4>
+              <p>
+               En SIMO, no solo gestionamos tareas; orquestamos movimientos 
+               estratégicos. Nuestro equipo multidisciplinario combina la 
+               experiencia técnica con una visión creativa para resolver los desafíos 
+               más complejos de la industria moderna.
+              </p>
+              <button className="valores-boton" onClick={() => navigate("/Contacto")}>TRABAJA CON NOSOTROS</button>
+            </div>
+          </div>
+        </section>
+      </div>
     </TransiciondePag>
   )
 }
