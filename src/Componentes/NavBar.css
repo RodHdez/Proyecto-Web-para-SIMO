@@ -36,6 +36,7 @@
 }
 
 .navbar-lado-links a {
+    font-family: 'Telka Wide', sans-serif;
     color: #FFFFFF;
     text-decoration: none;
     font-weight: 500;
@@ -49,26 +50,26 @@
 }
 
 .navbar-lado-links a:hover {
-    opacity: 0.75;
+    color: #262626;
 }
 
 /*Para que la primera seccion se alinee con la division*/
 .navbar-lado-links a:first-child.active {
     clip-path: polygon(
-        0% 0%,     /* top-left corner - flush to edge */
-        90% 0%,    /* top-right corner */
-        100% 100%, /* bottom-right corner */
-        15% 100%   /* bottom-left corner - adjust this to match the SVG diagonal */
+        0% 0%,     /* Esquina Arriba Izquierda - Pegada al borde */
+        90% 0%,    /* Esquina Arriba Derecha*/
+        100% 100%, /* Esquina abajo Izquierda*/
+        15% 100%   /* Esquina abajo Izquierda -Ajustada para igualar al borde*/
     );
 }
 
 /*Para que la ultima seccion se alinee con el borde de la pagina*/
 .navbar-lado-links a:last-child.active {
     clip-path: polygon(
-        0% 0%,     /* top-left corner */
-        100% 0%,   /* top-right corner - flush to edge */
-        100% 100%, /* bottom-right corner - flush to edge */
-        10% 100%   /* bottom-left corner */
+        0% 0%,     /* Esquina Arriba Izquierda */
+        100% 0%,   /* Esquina Arriba Derecha - Pegada al borde */
+        100% 100%, /* Esquina abajo Izquierda  - Pegada al borde*/
+        10% 100%   /* Esquina abajo Izquierda  */
     );
 }
 
@@ -78,8 +79,9 @@
     clip-path: polygon(
         0% 0%,   /* Esquina Arriba Izquierda */
         90% 0%,  /* Esquina Arriba Derecha (movida a la derecha para crear la diagonal) */
-        100% 100%, /* Esquina abajo Izquierda */
-        10% 100%  /* Esquina abajo derecha (movida a la derecha para crear la diagonal) */
+        100% 100%, /* Esquina abajo Derecha */
+        10% 100%  /* Esquina abajo Izquierda (movida a la derecha para crear la diagonal) */
     );
     transition: clip-path 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
+
