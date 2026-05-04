@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
+import TransiciondePag from "../Componentes/TransiciondePag";
 
 // Array con la informacion de cada Slide
 const slides = [
@@ -80,7 +81,9 @@ export default function Home() {
   };
 
   return (
-    // Referencia al contenedor para el IntersectionObserver
+    <TransiciondePag>
+
+    {/* Referencia al contenedor para el IntersectionObserver*/}
     <div className="home-contenedor" ref={containerRef}>
 
       {/* Loop por cada una de las slides */}
@@ -120,5 +123,6 @@ export default function Home() {
       </div>
 
     </div>
+    </TransiciondePag>
   );
 }
