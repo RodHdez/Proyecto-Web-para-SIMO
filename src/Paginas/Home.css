@@ -1,0 +1,94 @@
+/* Contenedor principal - ocupa toda la pantalla menos de la barrade navegacion */
+.home-contenedor {
+    height: calc(100vh - 64px); /* 100vh menos la altura de la barra de navegacion */
+    overflow-y: scroll; /* permite el scroll vertical */
+    scroll-snap-type: y mandatory; /* fuerza que cada scroll pare en una slide */
+    position: relative;
+}
+
+/* Cada slide ocupa exactamente el espacio visible de la pantalla */
+.slide {
+    height: calc(100vh - 64px); /* misma altura que el contenedor */
+    min-height: calc(100vh - 64px); /*altura minima */
+    scroll-snap-align: start; /* cada slide se alinea al inicio del contenedor */
+    scroll-snap-stop: always; /* obliga a parar en cada slide al hacer scroll */
+    display: flex;
+    align-items: center; /* centra el contenido verticalmente */
+    justify-content: flex-start; /* alinea el contenido a la izquierda */
+    position: relative;
+}
+
+/* Contenedor del texto y boton dentro de cada slide */
+.slide-content {
+    display: flex;
+    flex-direction: column; /* apila titulo, descripcion y boton verticalmente */
+    align-items: flex-start; /* alinea todo a la izquierda */
+    gap: 1.5rem; /* espacio entre cada elemento */
+    max-width: 600px;
+    padding: 0 4rem;
+    color: #FFFFFF;
+}
+
+/* Titulo principal de cada slide */
+.slide-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+/* Descripcion de cada slide */
+.slide-descripcion {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* Boton de navegacion con forma de paralelogramo */
+.slide-button {
+    background-color: #FB8103;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%); /* forma de paralelogramo, ver NavBar.css para detalles */
+    transition: opacity 0.2s ease;
+}
+
+/* Efecto hover del boton */
+.slide-button:hover {
+    opacity: 0.85;
+}
+
+/* Indicador de navegacion fijo al lado derecho de la pantalla */
+.slide-indicator {
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%); 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    z-index: 100; /* se mantiene encima de todo el contenido */
+}
+
+/* Cada punto individual del indicador */
+.indicador-individual {
+    width: 8px;
+    height: 40px;
+    border-radius: 999px; /* forma de pildora */
+    background-color: rgba(255, 255, 255, 0.4); /* blanco semitransparente cuando inactivo */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 0;
+}
+
+/* Punto activo - naranja y mas grande */
+.indicador-individual.active {
+    background-color: #FB8103;
+    transform: scale(1.4); /* agranda el activo */
+    Height: 56px; /* agranda el activo */
+}
