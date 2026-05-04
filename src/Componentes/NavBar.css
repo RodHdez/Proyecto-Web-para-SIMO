@@ -1,0 +1,85 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    background-color: #FB8103;
+    width: 100%;
+}
+
+.navbar-logo {
+    height: 100px;
+    width: auto;
+}
+
+.navbar-lado-logo {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 0 2rem;
+    height: 100%;
+    flex: 1;
+}
+
+.navbar-diagonal {
+    height: 100%;
+    width: 60px;
+    flex-shrink: 0;
+    margin-right: -60px;
+}
+
+.navbar-lado-links {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.navbar-lado-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-lado-links a:hover {
+    opacity: 0.75;
+}
+
+/*Para que la primera seccion se alinee con la division*/
+.navbar-lado-links a:first-child.active {
+    clip-path: polygon(
+        0% 0%,     /* top-left corner - flush to edge */
+        90% 0%,    /* top-right corner */
+        100% 100%, /* bottom-right corner */
+        15% 100%   /* bottom-left corner - adjust this to match the SVG diagonal */
+    );
+}
+
+/*Para que la ultima seccion se alinee con el borde de la pagina*/
+.navbar-lado-links a:last-child.active {
+    clip-path: polygon(
+        0% 0%,     /* top-left corner */
+        100% 0%,   /* top-right corner - flush to edge */
+        100% 100%, /* bottom-right corner - flush to edge */
+        10% 100%   /* bottom-left corner */
+    );
+}
+
+.navbar-lado-links a.active {
+    background-color: #FFFFFF;
+    color: #FB8103;
+    clip-path: polygon(
+        0% 0%,   /* Esquina Arriba Izquierda */
+        90% 0%,  /* Esquina Arriba Derecha (movida a la derecha para crear la diagonal) */
+        100% 100%, /* Esquina abajo Izquierda */
+        10% 100%  /* Esquina abajo derecha (movida a la derecha para crear la diagonal) */
+    );
+    transition: clip-path 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
