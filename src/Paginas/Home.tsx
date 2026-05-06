@@ -6,25 +6,25 @@ import TransiciondePag from "../Componentes/TransiciondePag";
 // Array con la informacion de cada Slide
 const slides = [
   {
-    title: "Conócenos",
+    title: "NUESTRAS IDEAS EN MOVIMIENTO",
     description: "Soluciones especializadas en gestión de proyectos; diseñadas para elevar la innovación e integridad financiera de su organización.",
     route: "/Conocenos",
     color: "#1a1a2e",
   },
   {
-    title: "Socios",
+    title: "NUESTRAS CONEXIONES",
     description: "Trabajamos con partners estratégicos para impulsar la ejecución de proyectos de alto impacto.",
     route: "/Socios",
     color: "#16213e",
   },
   {
-    title: "Corporativa",
+    title: "TUS SOLUCIONES A LARGO PLAZO",
     description: "Nosotros te apoyamos con ideas innovadoras que se transforman en soluciones tecnológicas de vanguardia.",
     route: "/Corporativa",
     color: "#0f3460",
   },
   {
-    title: "Contacto",
+    title: "CONTÁCTANOS",
     description: "Estamos listos para darle un avance a tu compañía con las mejoras tecnológicas que necesita.",
     route: "/Contacto",
     color: "#533483",

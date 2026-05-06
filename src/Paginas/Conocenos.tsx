@@ -22,7 +22,7 @@ export default function Conocenos() {
         {/*Tarjetas de ubicacion*/}
         <div className="tarjetas-primerizas">
           <div className="ubicacion-tarjeta">
-            <span className="ubicacion-icono">📍</span>
+            <span className="ubicacion-icono"><img width="50" height="50" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/></span>
             <p>San Salvador</p>
             <p>El Salvador</p>
           </div>
@@ -31,7 +31,7 @@ export default function Conocenos() {
           <p>SEDES</p>
         </div>
         <div className="ubicacion-tarjeta">
-        <span className="ubicacion-icono">📍</span>
+        <span className="ubicacion-icono"><img width="50" height="50" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/></span>
             <p>Quito</p>
             <p>Ecuador</p>
         </div>
@@ -42,7 +42,7 @@ export default function Conocenos() {
         <section className="conocenos-grid">
           {/* Tarjeta Mision */}
           <div className="grid-tarjeta">
-            <span className="grid-icono">🔶</span>
+            <span className="grid-icono"><img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/define-location--v2.png" alt="define-location--v2"/></span>
             <h3>Misión</h3>
             <p>
               Empoderar la soberanía de las naciones y la integridad financiera a través de una
@@ -53,7 +53,7 @@ export default function Conocenos() {
 
            {/* Tarjeta Vision */}
           <div className="grid-tarjeta">
-            <span className="grid-icono">🔶</span>
+            <span className="grid-icono"><img width="30" height="30" src="https://img.icons8.com/material-outlined/24/visible--v2.png" alt="visible--v2"/></span>
             <h3>Visión</h3>
             <p>
               Ser el orquestador líder de infraestructuras digitales autónomas en 
@@ -64,7 +64,7 @@ export default function Conocenos() {
 
           {/* Tarjeta Experiencia */}
           <div className="grid-tarjeta">
-            <span className="grid-icono">🔶</span>
+            <span className="grid-icono"><img width="30" height="30" src="https://img.icons8.com/ios/50/approval--v2.png" alt="approval--v2"/></span>
             <h3>Experiencia</h3>
             <p>
               Más de una década perfeccionando metodologías ágiles y robustas
@@ -75,12 +75,11 @@ export default function Conocenos() {
           
           {/* Tarjeta Compromiso */}
           <div className="grid-tarjeta">
-            <span className="grid-icono">🔶</span>
+            <span className="grid-icono"><img width="30" height="30" src="https://img.icons8.com/ios/50/handshake--v1.png" alt="handshake--v1"/></span>
             <h3>Compromiso</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Trabajamos con dedicación para superar las expectativas de
-              nuestros clientes en cada proyecto.
+              Nuestra ética profesional y el compromiso con el éxito del cliente son 
+              los pilares que sostienen cada relación a largo plazo que construimos hoy.
             </p>
           </div>
         </section>
