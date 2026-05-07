@@ -18,15 +18,28 @@
     position: relative;
 }
 
+/* overlay oscuro sobre la imagen */
+.slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+}
+
 /* Contenedor del texto y boton dentro de cada slide */
 .slide-content {
+  position: relative;
+    z-index: 1; /* mantiene el texto encima del overlay */
+    position: relative;
+    z-index: 1;
+    color: white;
     display: flex;
-    flex-direction: column; /* apila titulo, descripcion y boton verticalmente */
-    align-items: flex-start; /* alinea todo a la izquierda */
-    gap: 1.5rem; /* espacio entre cada elemento */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
     max-width: 600px;
     padding: 0 4rem;
-    color: #FFFFFF;
 }
 
 /* Titulo principal de cada slide */

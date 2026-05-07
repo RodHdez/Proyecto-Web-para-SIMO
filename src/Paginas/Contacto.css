@@ -1,0 +1,259 @@
+/* Contenedor general */
+.contacto-contenedor {
+    width: 100%;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+}
+
+/* ── HERO ── */
+.contacto-hero {
+    padding: 4rem 4rem 2rem 4rem;
+    background-color: #f5f5f5;
+}
+
+.contacto-subtitulo {
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-titulo {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1.1;
+}
+
+/* Parte naranja del titulo */
+.titulo-naranja {
+    color: #FB8103;
+}
+
+/* ── FORMULARIO + INFO ── */
+.contacto-formulario-seccion {
+    display: flex;
+    gap: 0;
+    margin: 0 4rem 3rem 4rem;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Formulario izquierdo */
+.formulario-contenedor {
+    flex: 1.5;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: white;
+}
+
+.formulario-contenedor h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: white;
+}
+
+
+/* Cada campo del formulario */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.campo label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: #888;
+}
+
+/* Inputs y textarea */
+.campo input,
+.campo textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #444;
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    outline: none;
+    resize: none;
+    font-family: inherit;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #555;
+}
+
+/* Mensaje de error */
+.error {
+    color: #ff4444;
+    font-size: 0.75rem;
+}
+
+/* Boton de envio */
+.formulario-boton {
+    background-color: #FB8103;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
+    align-self: flex-start;
+    transition: opacity 0.2s ease;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.formulario-boton:hover {
+    opacity: 0.85;
+}
+
+.formulario-boton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Info de contacto derecha */
+.contacto-info {
+    flex: 1;
+    background-color: #222;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Cada item de info */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: white;
+}
+
+.info-icono {
+    font-size: 1.2rem;
+    color: #FB8103;
+    margin-top: 0.2rem;
+}
+
+.info-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: #FB8103;
+    margin-bottom: 0.3rem;
+}
+
+.info-item p {
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+/* ── CARRUSEL ── */
+.contacto-carrusel {
+    display: flex;
+    margin: 0 4rem 3rem 4rem;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px;
+}
+
+/* Contenedor de imagenes apiladas */
+.carrusel-imagen-contenedor {
+    flex: 1;
+    position: relative;
+}
+
+/* Cada imagen apilada encima de la otra */
+.carrusel-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease; /* transicion suave entre imagenes */
+}
+
+/* La imagen activa es visible */
+.carrusel-imagen.activa {
+    opacity: 1;
+}
+
+.carrusel-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* blanco y negro como en el mockup */
+}
+
+/* Etiqueta de ciudad sobre la imagen */
+.carrusel-etiqueta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+}
+
+/* Info de red global derecha */
+.carrusel-info {
+    flex: 1;
+    background-color: #1a1a1a;
+    padding: 2.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.carrusel-info h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.carrusel-info p {
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* Stats del carrusel */
+.carrusel-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.carrusel-stat h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #FB8103;
+}
+
+.carrusel-stat p {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+
+.info-icono {
+    filter: invert(55%) sepia(97%) saturate(800%) hue-rotate(1deg) brightness(103%);
+}
