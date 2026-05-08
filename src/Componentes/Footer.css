@@ -1,0 +1,170 @@
+/* contenedor principal del footer, position relative para que fluya al final del contenido */
+.footer-contenedor {
+  background-color: #1d1e1c;
+  color: #ffffff;
+  position: relative;
+  font-family: var(--fuente-simo), sans-serif;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* linea decorativa horizontal simple en el borde superior */
+.linea-decorativa {
+  position: absolute;
+  top: 30px; 
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #ffffff;
+  z-index: 1;
+}
+
+/* boton naranja para regresar al inicio de la pagina */
+.boton-subir {
+  position: absolute;
+  top: 30px; 
+  right: 50px;
+  transform: translateY(-50%);
+  background-color: #fb8103;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.2s ease;
+}
+
+.boton-subir:hover {
+  opacity: 0.85;
+}
+
+/* flecha del boton usando svg */
+.icono-flecha {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* padding general para el contenido principal */
+.footer-contenido {
+  padding: 80px 50px 40px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* seccion izquierda con logo, texto y cajas de estadisticas */
+.footer-izq {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 420px; 
+}
+
+.logo-footer {
+  width: 160px;
+  object-fit: contain;
+}
+
+.texto-descripcion {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* contenedor de las cajas con x */
+.cajas-grid {
+  display: flex;
+  gap: 12px;
+}
+
+/* diseno individual de cada caja */
+.caja-stat {
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.caja-x {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.caja-etiqueta {
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+/* seccion derecha con las tres columnas de enlaces */
+.footer-der {
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: center;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+}
+
+.columna-titulo {
+  color: #fb8103;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.columna-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.columna-lista li {
+  font-size: 0.85rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.columna-lista li:hover {
+  color: #fb8103;
+}
+
+/* iconos de la columna de contacto */
+.icono-contacto {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+}
+
+/* linea de derechos reservados al fondo */
+.footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 50px;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
