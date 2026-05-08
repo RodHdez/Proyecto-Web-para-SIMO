@@ -1,0 +1,213 @@
+/* contenedor general de la pagina corporativa */
+.corporativa-contenedor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* seccion hero principal */
+.corp-hero {
+  padding: 5rem 4rem;
+  background-color: #f5f3f3;
+  position: relative;
+  overflow: hidden;
+}
+
+.corp-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1d1e1c;
+  margin-bottom: 0.5rem;
+}
+
+.corp-subtitulo {
+  font-size: 1.2rem;
+  color: #fb8103;
+  font-weight: 600;
+  max-width: 600px;
+}
+
+/* seccion de grid de sectores */
+.corp-sectores {
+  padding: 5rem 4rem;
+  background-color: #ffffff;
+}
+
+/* grid de 3 columnas para los sectores */
+.sectores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* tarjeta individual de cada sector */
+.sector-card {
+  height: 350px;
+  border-radius: 12px;
+  padding: 2rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: #262626;
+}
+
+.sector-card:hover {
+  transform: translateY(-5px);
+}
+
+/* numero o badge del sector */
+.sector-badge {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: #fb8103;
+  padding: 0.3rem 0.8rem;
+  font-weight: 700;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.sector-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* ── nuestro enfoque (actualizado al nuevo diseno) ── */
+.corp-enfoque {
+  background-color: #0f0f0f; /* fondo casi negro */
+  color: #ffffff;
+  padding: 6rem 4rem;
+  font-family: sans-serif; /* quitamos la tipografia serif */
+}
+
+.corp-enfoque h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* linea decorativa debajo del titulo de enfoque */
+.corp-enfoque h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 6px; /* linea mas gruesa */
+  background-color: #fb8103;
+  margin-top: 0.8rem;
+}
+
+/* grid de 4 tarjetas del proceso */
+.enfoque-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem; /* espacio para que los cuadritos de numeros no se corten */
+}
+
+/* cada tarjeta individual (paso) */
+.enfoque-paso {
+  background-color: #1f1f1f; /* color gris oscuro de la tarjeta */
+  border-left: 4px solid #fb8103; /* borde naranja caracteristico a la izquierda */
+  padding: 2.5rem 2rem;
+  position: relative; /* necesario para posicionar el numero flotante */
+}
+
+/* cuadrito con el numero flotando arriba a la derecha */
+.paso-badge {
+  position: absolute;
+  top: -20px; /* lo subimos fuera de la tarjeta */
+  right: 20px;
+  background-color: #1f1f1f;
+  color: #fb8103;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #333333; /* bordecito sutil */
+}
+
+/* texto step // 01 */
+.enfoque-paso h4 {
+  color: #fb8103;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* titulo grande de la tarjeta */
+.enfoque-paso h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* descripcion de la tarjeta */
+.enfoque-paso p {
+  font-size: 0.9rem;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+/* ── llamado a la accion final (cta) ── */
+.corp-cta-contenedor {
+  background-color: #f5f3f3; 
+  padding: 4rem 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* el cuadro naranja en si mismo */
+.corp-cta {
+  background-color: #fb8103;
+  padding: 3rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.cta-texto {
+  flex: 1;
+  max-width: 600px;
+}
+
+.cta-texto h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-family: sans-serif;
+}
+
+.cta-texto p {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* boton oscuro */
+.boton-negro {
+  background-color: #2a1b12; 
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton-negro:hover {
+  background-color: #1a1a1a;
+}
