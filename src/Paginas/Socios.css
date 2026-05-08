@@ -1,0 +1,199 @@
+/* contenedor principal de la pagina socios */
+.socios-contenedor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* seccion hero principal */
+.socios-hero {
+  display: flex;
+  align-items: center;
+  padding: 5rem 4rem;
+  background-color: #ffffff;
+  gap: 4rem;
+}
+
+.hero-texto {
+  flex: 1;
+}
+
+/* etiqueta naranja redondeada */
+.badge-naranja {
+  display: inline-block;
+  background-color: rgba(251, 129, 3, 0.1);
+  color: #fb8103;
+  padding: 0.5rem 1rem;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.hero-texto h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1d1e1c;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-texto p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* placeholder para la imagen corporativa grande */
+.hero-imagen {
+  flex: 1;
+  height: 400px;
+  background-color: #d9d9d9;
+  border-radius: 12px;
+  /* sombra naranja desplazada segun el diseño */
+  box-shadow: -15px 15px 0px 0px rgba(251, 129, 3, 0.2);
+}
+
+/* seccion de beneficios con fondo gris claro */
+.socios-beneficios {
+  padding: 5rem 4rem;
+  background-color: #f5f3f3;
+}
+
+.beneficios-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.beneficios-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1d1e1c;
+}
+
+/* grid de 2x2 para las tarjetas de beneficios */
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.beneficio-card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  transition: transform 0.2s ease;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+}
+
+.beneficio-icono {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.beneficio-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #1d1e1c;
+}
+
+.beneficio-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* seccion de logos de aliados con fondo oscuro */
+.socios-logos {
+  background-color: #1d1e1c;
+  padding: 5rem 4rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.socios-logos h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  letter-spacing: 0.05em;
+}
+
+/* grid de 6 columnas para alinear los logos */
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  align-items: center;
+  opacity: 0.5; /* simula el efecto de logos en escala de grises transparentes */
+}
+
+.logo-placeholder {
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+/* seccion final dinamica */
+.socios-dinamica {
+  display: flex;
+  padding: 5rem 4rem;
+  background-color: #ffffff;
+  gap: 4rem;
+  align-items: center;
+}
+
+.dinamica-texto {
+  flex: 1;
+}
+
+.dinamica-texto h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #1d1e1c;
+}
+
+.dinamica-texto p {
+  color: #555;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* boton con el corte en diagonal de simo */
+.boton-naranja {
+  background-color: #fb8103;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
+  transition: opacity 0.2s;
+}
+
+.boton-naranja:hover {
+  opacity: 0.85;
+}
+
+/* grid de imagenes 2x2 de la seccion dinamica */
+.dinamica-galeria {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.galeria-img {
+  background-color: #d9d9d9;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
