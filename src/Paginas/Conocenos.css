@@ -38,13 +38,14 @@
 /* Contenedor de las tarjetas de ubicacion */
 .tarjetas-primerizas{
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
 /* Cada tarjeta de ubicacion */
 .ubicacion-tarjeta {
     background-color: #FB8103;
-    color: white;
+    color: #1D1E1C;
     padding: 1.5rem 1rem;
     border-radius: 8px;
     text-align: center;
@@ -52,21 +53,17 @@
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
-    min-width: 100px;
+    width: 120px;
     font-weight: 600;
 }
 
 /* Tarjeta central destacada - mas grande */
 .ubicacion-titulo {
-    padding: 1.5rem 1rem;
-    border-radius: 8px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.3rem;
-    min-width: 100px;
-    font-weight: 600;
+    justify-content: center;
+    height: 100%;
 }
 
 .ubicacion-icono {
@@ -101,6 +98,10 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: #1a1a1a;
+}
+
+.grid-icono {
+    filter: invert(55%) sepia(97%) saturate(800%) hue-rotate(1deg) brightness(103%);
 }
 
 .grid-tarjeta p {

@@ -2,32 +2,43 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import TransiciondePag from "../Componentes/TransiciondePag";
+import slide1 from "../assets/ChipHome.jpg";
+import slide2 from "../assets/dealHome.jpg";
+import slide3 from "../assets/BombilloHome.jpg";
+import slide4 from "../assets/contactHome.jpg";
+
+
+
 
 // Array con la informacion de cada Slide
 const slides = [
   {
-    title: "Conócenos",
+    title: "NUESTRAS IDEAS EN MOVIMIENTO",
     description: "Soluciones especializadas en gestión de proyectos; diseñadas para elevar la innovación e integridad financiera de su organización.",
     route: "/Conocenos",
     color: "#1a1a2e",
+    imagen: slide1,
   },
   {
-    title: "Socios",
+    title: "NUESTRAS CONEXIONES",
     description: "Trabajamos con partners estratégicos para impulsar la ejecución de proyectos de alto impacto.",
     route: "/Socios",
     color: "#16213e",
+    imagen: slide2,
   },
   {
-    title: "Corporativa",
+    title: "TUS SOLUCIONES A LARGO PLAZO",
     description: "Nosotros te apoyamos con ideas innovadoras que se transforman en soluciones tecnológicas de vanguardia.",
     route: "/Corporativa",
     color: "#0f3460",
+    imagen: slide3,
   },
   {
-    title: "Contacto",
+    title: "CONTÁCTANOS",
     description: "Estamos listos para darle un avance a tu compañía con las mejoras tecnológicas que necesita.",
     route: "/Contacto",
     color: "#533483",
+    imagen: slide4,
   },
 ];
 
@@ -91,7 +102,11 @@ export default function Home() {
         <div
           key={index}
           className="slide"
-          style={{ backgroundColor: slide.color }}
+          style={{ 
+             backgroundImage: `url(${slide.imagen})`,
+             backgroundSize: "cover",
+             backgroundPosition: "center",
+          }}
           // Asigna cada slide al elemento respectivo en el array de referencias
           ref={(el: HTMLDivElement | null) => void (slideRefs.current[index] = el)}
         >
