@@ -80,9 +80,8 @@ export default function Conocenos() {
             <span className="grid-icono"><img width="30" height="30" src="https://img.icons8.com/ios/50/handshake--v1.png" alt="handshake--v1"/></span>
             <h3>Compromiso</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Trabajamos con dedicación para superar las expectativas de
-              nuestros clientes en cada proyecto.
+              Nuestra ética profesional y el compromiso con el éxito del cliente son 
+              los pilares que sostienen cada relación a largo plazo que construimos hoy.
             </p>
           </div>
         </section>
