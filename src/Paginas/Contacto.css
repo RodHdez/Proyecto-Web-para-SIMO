@@ -1,0 +1,380 @@
+/* ── estilos generales de la pagina ── */
+.contacto-contenedor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #e5e5e5;
+  font-family: sans-serif;
+}
+
+/* ── seccion del encabezado (fuera de la caja oscura) ── */
+.contacto-encabezado {
+  padding: 80px 4rem 40px 4rem;
+}
+
+/* linea vertical naranja fina a la izquierda del texto pequeno */
+.linea-encabezado {
+  border-left: 3px solid #fb8103;
+  padding-left: 15px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* texto gris oscuro en mayusculas */
+.txt-vision {
+  font-size: 11px;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+/* titulo grande con colores negro y naranja */
+.contacto-encabezado h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.txt-naranja {
+  color: #fb8103;
+}
+
+/* ── seccion de cuerpo principal ── */
+.contacto-cuerpo {
+  padding: 0 4rem 100px 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* separacion entre la caja de contacto y la red global */
+}
+
+/* la caja de contacto oscura principal */
+.contacto-caja-oscura {
+  background-color: #111111;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; 
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); 
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* ── columna izquierda: formulario ── */
+.contacto-formulario {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+/* titulo del formulario alineado a la izq */
+.div-titulo-formulario {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+/* linea naranja antes del titulo */
+.subrayado-naranja {
+  width: 40px;
+  height: 2px;
+  background-color: #fb8103;
+}
+
+.contacto-formulario-titulo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* campos de entrada minimalistas */
+.form-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+/* etiquetas gris claro/oscuro */
+.form-campo label {
+  font-size: 11px;
+  color: #888888;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* inputs sin fondo, solo linea inferior */
+.form-campo input,
+.form-campo textarea {
+  padding: 10px 0 15px 0;
+  border: none;
+  border-bottom: 1px solid #4a3320; 
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: sans-serif;
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+
+.form-campo input::placeholder,
+.form-campo textarea::placeholder {
+  color: #333333;
+}
+
+.form-campo input:focus,
+.form-campo textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #fb8103;
+}
+
+.form-campo textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* boton naranja con recorte poligonal */
+.form-div-boton {
+  margin-top: 10px;
+}
+
+.boton-enviar-datos {
+  background-color: #fb8103;
+  color: #000000; 
+  border: none;
+  padding: 15px 35px;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  transition: background-color 0.2s ease;
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 90% 100%, 0 100%);
+}
+
+.boton-enviar-datos:hover {
+  background-color: #e07300;
+}
+
+/* icono negro dentro del boton */
+.icono-cohete {
+  width: 18px;
+  height: 18px;
+  fill: #000000;
+}
+
+/* ── columna derecha: informacion directa ── */
+.contacto-info-column {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* efecto diagonal sutil en el fondo de la columna derecha */
+.contacto-info-column::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -50px; right: 0; bottom: 0;
+  background-color: #161616;
+  transform: skewX(-10deg);
+  z-index: -1;
+  box-shadow: -10px 0 20px rgba(0,0,0,0.5);
+}
+
+/* contenedor relativo para las cajas y la linea */
+.info-lista-contenedor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* linea vertical naranja de conexion */
+.linea-conexion {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 29px; 
+  width: 2px;
+  background-color: #fb8103;
+  z-index: 1;
+}
+
+/* cada bloque de informacion */
+.info-bloque {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+/* contenedor del icono circular naranja */
+.icono-info-box-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fb8103;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 10px #161616;
+}
+
+/* icono negro dentro del circulo */
+.icono-info-box {
+  width: 24px;
+  height: 24px;
+  fill: #000000;
+}
+
+/* textos de la informacion */
+.texto-info-box h3 {
+  font-size: 11px;
+  color: #fb8103;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.texto-info-box p {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ── nueva seccion: red global ── */
+.contacto-red-global {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px; /* espacio entre imagen y caja */
+}
+
+/* tarjeta izquierda: imagen de san salvador */
+.red-card-img {
+  position: relative;
+  background-color: #888888;
+  /* imagen de fondo de ejemplo (reemplazable desde tsx) */
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  overflow: hidden;
+}
+
+/* capa semitransparente para que el texto resalte sobre la foto */
+.red-card-img::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 50%);
+  z-index: 1;
+}
+
+.red-img-contenido {
+  position: relative;
+  z-index: 2;
+}
+
+/* etiqueta naranja de nuestras sedes */
+.red-img-badge {
+  background-color: #fb8103;
+  color: #000000;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+
+/* texto de san salvador */
+.red-img-titulo {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 900;
+  font-style: italic; /* estilo cursiva como en el diseno */
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* tarjeta derecha: descripcion de la red */
+.red-card-texto {
+  background-color: #1a1a1a;
+  border-right: 3px solid #fb8103; /* borde naranja a la derecha */
+  border-radius: 4px;
+  padding: 50px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.red-card-texto h2 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 900;
+  font-style: italic;
+  margin: 0 0 20px 0;
+}
+
+.red-card-texto p {
+  color: #aaaaaa;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 40px 0;
+}
+
+/* grid inferior de estadisticas */
+.red-stats {
+  display: flex;
+  gap: 40px;
+}
+
+.red-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.red-stat-num {
+  color: #fb8103;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.red-stat-label {
+  color: #666666;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
