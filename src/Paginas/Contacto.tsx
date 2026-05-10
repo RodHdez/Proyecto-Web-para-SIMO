@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import type { SubmitHandler } from "react-hook-form";
 import { useState, useEffect } from "react";
 import TransiciondePag from "../Componentes/TransiciondePag";
+import Footer from "../Componentes/Footer"; /* importamos el footer aqui */
 import "./Contacto.css";
 
 // Tipos de los campos del formulario
@@ -129,7 +130,7 @@ export default function Contacto() {
               <span className="info-icono"><img width="30" height="30" src="https://img.icons8.com/material-outlined/48/mail.png" alt="mail"/></span>
               <div>
                 <p className="info-label">LÍNEA DIRECTA</p>
-                <p>info@simoes.com</p>
+                <p>info@simosv.com</p>
               </div>
             </div>
 
@@ -185,6 +186,9 @@ export default function Contacto() {
           </div>
 
         </section>
+
+         {/* el footer al final de la pagina */}
+                <Footer />
       </div>
     </TransiciondePag>
   );

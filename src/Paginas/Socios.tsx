@@ -59,7 +59,7 @@ export default function Socios() {
         </section>
 
         {/* seccion de logos en escala de grises */}
-        <section className="socios-logos">
+        {/*<section className="socios-logos">
           <h2>NUESTROS ALIADOS ESTRATÉGICOS</h2>
           <div className="logos-grid">
             <div className="logo-placeholder"></div>

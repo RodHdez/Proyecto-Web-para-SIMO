@@ -4,11 +4,43 @@ import "./Footer.css";
 export default function Footer() {
   const navigate = useNavigate();
 
-  {/* funcion que lleva al usuario al inicio de la pagina actual */}
+  {/* funcion infalible para subir al inicio sin importar el contenedor de la vista */}
   const subirAlInicio = () => {
+    
+    {/* 1. intentamos el scroll tradicional de la ventana */}
     window.scrollTo({
       top: 0,
       behavior: "smooth"
+    });
+
+    {/* 2. intentamos hacer scroll en el contenedor root de react */}
+    const root = document.getElementById("root");
+    if (root) {
+      root.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+    {/* 3. metodo cazador: busca los contenedores de tus vistas (-contenedor) */}
+    const contenedorVista = document.querySelector("[class$='-contenedor']");
+    if (contenedorVista) {
+      contenedorVista.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+      
+      {/* forzamos el desplazamiento hacia el inicio del bloque */}
+      contenedorVista.scrollIntoView({ 
+        behavior: "smooth", 
+        block: "start" 
+      });
+    }
+
+    {/* 4. recurso final: asegura el inicio del documento body */}
+    document.body.scrollIntoView({ 
+      behavior: "smooth", 
+      block: "start" 
     });
   };
 
@@ -37,25 +69,7 @@ export default function Footer() {
             Elevando la gestión de proyectos a través de la<br />
             innovación y la precisión estratégica.
           </p>
-          
-          <div className="cajas-grid">
-            <div className="caja-stat">
-              <span className="caja-x">X</span>
-              <span className="caja-etiqueta">Proyectos</span>
-            </div>
-            <div className="caja-stat">
-              <span className="caja-x">X</span>
-              <span className="caja-etiqueta">Clientes</span>
-            </div>
-            <div className="caja-stat">
-              <span className="caja-x">X</span>
-              <span className="caja-etiqueta">Servicios</span>
-            </div>
-            <div className="caja-stat">
-              <span className="caja-x">X</span>
-              <span className="caja-etiqueta">Empresas</span>
-            </div>
-          </div>
+         
         </div>
 
         {/* lado derecho: columnas de empresa, legal y contacto */}
