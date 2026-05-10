@@ -5,146 +5,154 @@
   flex-direction: column;
 }
 
-/* seccion hero principal */
+/* ── seccion hero principal (rediseñada segun imagen 1) ── */
 .socios-hero {
   display: flex;
   align-items: center;
-  padding: 5rem 4rem;
-  background-color: #ffffff;
-  gap: 4rem;
+  padding: 6rem 5rem;
+  background-color: #e5e5e5; /* fondo gris claro elegante */
+  gap: 5rem;
 }
 
 .hero-texto {
   flex: 1;
 }
 
-/* etiqueta naranja redondeada */
-.badge-naranja {
-  display: inline-block;
-  background-color: rgba(251, 129, 3, 0.1);
-  color: #fb8103;
-  padding: 0.5rem 1rem;
-  border-radius: 99px;
-  font-weight: 700;
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
+/* etiqueta superior red de valor */
+.overline-naranja {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.overline-naranja span {
+  color: #c96500; /* naranja ligeramente mas oscuro para legibilidad */
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.linea-naranja {
+  width: 40px;
+  height: 2px;
+  background-color: #fb8103;
 }
 
 .hero-texto h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #1d1e1c;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  font-size: 4.5rem; /* titulo mas grande e imponente */
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
 
 .hero-texto p {
-  color: #555;
+  color: #555555;
   font-size: 1.1rem;
   line-height: 1.6;
-  max-width: 500px;
+  max-width: 480px;
 }
 
-/* placeholder para la imagen corporativa grande */
+/* imagen hero limpia y oscura con sombra suave */
 .hero-imagen {
   flex: 1;
-  height: 400px;
-  background-color: #d9d9d9;
-  border-radius: 12px;
-  /* sombra naranja desplazada segun el diseño */
-  box-shadow: -15px 15px 0px 0px rgba(251, 129, 3, 0.2);
+  height: 550px;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* sombra suave, sin desplazamiento naranja */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1a1a1a;
 }
 
-/* seccion de beneficios con fondo gris claro */
+/* ── seccion de beneficios (se mantiene el diseno de 4 columnas) ── */
 .socios-beneficios {
-  padding: 5rem 4rem;
-  background-color: #f5f3f3;
+  padding: 5rem 5rem;
+  background-color: #f7f7f7; 
 }
 
-.beneficios-header {
-  text-align: center;
-  margin-bottom: 4rem;
+.beneficios-header-izq {
+  margin-bottom: 3rem;
+  text-align: left;
 }
 
-.beneficios-header h2 {
+.beneficios-header-izq h2 {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1d1e1c;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
 }
 
-/* grid de 2x2 para las tarjetas de beneficios */
-.beneficios-grid {
+.beneficios-header-izq p {
+  font-size: 1.1rem;
+  color: #666666;
+  max-width: 600px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.beneficios-grid-4 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 
-.beneficio-card {
+.beneficio-card-blanca {
   background-color: #ffffff;
-  padding: 2.5rem;
+  padding: 2.5rem 2rem;
   border-radius: 12px;
-  border: 1px solid #eaeaea;
-  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.beneficio-card:hover {
+.beneficio-card-blanca:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.beneficio-icono {
-  font-size: 2rem;
+.icono-fondo-naranja {
+  width: 10px;
+  height: 10px;
+  background-color: #fff0e6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.icono-fondo-naranja img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.beneficio-card-blanca h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
   margin-bottom: 1rem;
 }
 
-.beneficio-card h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-  color: #1d1e1c;
-}
-
-.beneficio-card p {
-  color: #666;
+.beneficio-card-blanca p {
   font-size: 0.95rem;
-  line-height: 1.6;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
 }
 
-/* seccion de logos de aliados con fondo oscuro */
-.socios-logos {
-  background-color: #1d1e1c;
-  padding: 5rem 4rem;
-  text-align: center;
-  color: #ffffff;
-}
-
-.socios-logos h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  letter-spacing: 0.05em;
-}
-
-/* grid de 6 columnas para alinear los logos */
-.logos-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 2rem;
-  align-items: center;
-  opacity: 0.5; /* simula el efecto de logos en escala de grises transparentes */
-}
-
-.logo-placeholder {
-  height: 40px;
-  background-color: #ffffff;
-  border-radius: 4px;
-}
-
-/* seccion final dinamica */
+/* ── seccion final dinamica (rediseñada segun imagen 2) ── */
 .socios-dinamica {
   display: flex;
-  padding: 5rem 4rem;
+  padding: 6rem 5rem;
   background-color: #ffffff;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
 }
 
@@ -153,47 +161,64 @@
 }
 
 .dinamica-texto h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  color: #1d1e1c;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  line-height: 1.1;
 }
 
 .dinamica-texto p {
-  color: #555;
+  color: #666666;
   margin-bottom: 2.5rem;
   line-height: 1.6;
-  max-width: 500px;
+  font-size: 1.05rem;
+  max-width: 450px;
 }
 
-/* boton con el corte en diagonal de simo */
-.boton-naranja {
+/* boton redondeado estandar */
+.boton-naranja-rounded {
   background-color: #fb8103;
   color: #ffffff;
   border: none;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
-  clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
-  transition: opacity 0.2s;
+  border-radius: 6px; /* bordes redondeados normales */
+  transition: background-color 0.2s;
 }
 
-.boton-naranja:hover {
-  opacity: 0.85;
+.boton-naranja-rounded:hover {
+  background-color: #e07300;
 }
 
-/* grid de imagenes 2x2 de la seccion dinamica */
-.dinamica-galeria {
+/* galeria estilo masonry de 2 columnas */
+.dinamica-galeria-masonry {
   flex: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  display: flex;
+  gap: 1.2rem; /* espacio entre columnas */
 }
 
-.galeria-img {
-  background-color: #d9d9d9;
-  height: 200px;
+/* columnas de la galeria */
+.columna-masonry {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* espacio vertical entre imagenes */
+  flex: 1;
+}
+
+/* imagenes de la galeria, con diferentes alturas para crear el efecto */
+.img-masonry {
+  width: 100%;
   border-radius: 8px;
   object-fit: cover;
+  background-color: #d9d9d9;
 }
+
+/* alturas especificas basadas en tu imagen de referencia */
+.img-top-left { height: 260px; }
+.img-bottom-left { height: 350px; }
+.img-top-right { height: 350px; }
+.img-bottom-right { height: 260px; }

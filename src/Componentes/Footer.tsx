@@ -103,7 +103,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline strokeLinecap="round" strokeLinejoin="round" points="22,6 12,13 2,6" />
                 </svg>
-                info@simogestion.com
+                info@simosv.com
               </li>
               <li>
                 {/* icono de pin de ubicacion */}
@@ -129,7 +129,7 @@ export default function Footer() {
 
       {/* zona de derechos reservados abajo de todo */}
       <div className="footer-copyright">
-        © 2024 SIMO Soluciones en Gestión de Proyectos. Todos los derechos reservados.
+        © 2026 Sistemas En Movimiento. Todos los derechos reservados.
       </div>
       
     </footer>
