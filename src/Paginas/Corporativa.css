@@ -1,11 +1,11 @@
-/* contenedor general de la pagina corporativa */
+/* contenedor general de la pagina corporativa que asegura un diseno de columna */
 .corporativa-contenedor {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* seccion hero principal */
+/* ── seccion hero principal ── */
 .corp-hero {
   padding: 5rem 4rem;
   background-color: #f5f3f3;
@@ -27,7 +27,7 @@
   max-width: 600px;
 }
 
-/* seccion de grid de sectores */
+/* ── seccion de grid de sectores (con imagenes) ── */
 .corp-sectores {
   padding: 5rem 4rem;
   background-color: #ffffff;
@@ -40,120 +40,136 @@
   gap: 2rem;
 }
 
-/* tarjeta individual de cada sector */
+/* tarjeta individual de cada sector preparada para imagen de fondo */
 .sector-card {
-  height: 350px;
-  border-radius: 12px;
-  padding: 2rem;
+  height: 420px; /* un poco mas altas para lucir las imagenes */
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-end; /* empuja el contenido hacia abajo */
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  background-color: #262626;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* configuracion para que la imagen cubra toda la tarjeta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #333333; /* color de respaldo */
+}
+
+/* gradiente oscuro inferior para que el texto siempre sea legible */
+.sector-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+  z-index: 1;
 }
 
 .sector-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* numero o badge del sector */
-.sector-badge {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  background-color: #fb8103;
-  padding: 0.3rem 0.8rem;
-  font-weight: 700;
-  border-radius: 4px;
-  font-size: 0.9rem;
-}
-
-.sector-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
+/* contenedor del texto para que quede por encima del gradiente oscuro */
+.sector-contenido {
+  position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
-/* ── nuestro enfoque (actualizado al nuevo diseno) ── */
+/* numero del sector en color naranja corporativo */
+.sector-badge {
+  color: #fb8103;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* titulo grande del sector */
+.sector-card h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ── seccion "nuestro enfoque" ── */
 .corp-enfoque {
-  background-color: #0f0f0f; /* fondo casi negro */
+  background-color: #0f0f0f;
   color: #ffffff;
   padding: 6rem 4rem;
-  font-family: sans-serif; /* quitamos la tipografia serif */
 }
 
 .corp-enfoque h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: -0.02em;
 }
 
-/* linea decorativa debajo del titulo de enfoque */
-.corp-enfoque h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 6px; /* linea mas gruesa */
-  background-color: #fb8103;
-  margin-top: 0.8rem;
+.corp-enfoque .enfoque-intro {
+  font-size: 0.9rem;
+  color: #cccccc;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 4rem;
 }
 
-/* grid de 4 tarjetas del proceso */
 .enfoque-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  margin-top: 2rem; /* espacio para que los cuadritos de numeros no se corten */
 }
 
-/* cada tarjeta individual (paso) */
 .enfoque-paso {
-  background-color: #1f1f1f; /* color gris oscuro de la tarjeta */
-  border-left: 4px solid #fb8103; /* borde naranja caracteristico a la izquierda */
-  padding: 2.5rem 2rem;
-  position: relative; /* necesario para posicionar el numero flotante */
+  background-color: #1a1a1a;
+  border-left: 6px solid #fb8103;
+  padding: 2.5rem 2rem 2.5rem 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-/* cuadrito con el numero flotando arriba a la derecha */
 .paso-badge {
   position: absolute;
-  top: -20px; /* lo subimos fuera de la tarjeta */
-  right: 20px;
-  background-color: #1f1f1f;
-  color: #fb8103;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: #fb8103;
+  color: #ffffff;
   font-weight: 800;
   font-size: 1.1rem;
-  padding: 0.5rem 0.8rem;
-  border: 1px solid #333333; /* bordecito sutil */
+  padding: 0.5rem 0.9rem;
+  border-radius: 2px;
 }
 
-/* texto step // 01 */
 .enfoque-paso h4 {
   color: #fb8103;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
-/* titulo grande de la tarjeta */
 .enfoque-paso h3 {
   font-size: 1.6rem;
   font-weight: 800;
   margin-bottom: 1rem;
   color: #ffffff;
   text-transform: uppercase;
+  letter-spacing: -0.01em;
 }
 
-/* descripcion de la tarjeta */
 .enfoque-paso p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #cccccc;
   line-height: 1.6;
 }
@@ -166,7 +182,6 @@
   justify-content: center;
 }
 
-/* el cuadro naranja en si mismo */
 .corp-cta {
   background-color: #fb8103;
   padding: 3rem 4rem;
@@ -187,7 +202,6 @@
   font-weight: 800;
   color: #1a1a1a;
   margin-bottom: 0.5rem;
-  font-family: sans-serif;
 }
 
 .cta-texto p {
@@ -196,7 +210,6 @@
   line-height: 1.5;
 }
 
-/* boton oscuro */
 .boton-negro {
   background-color: #2a1b12; 
   color: #ffffff;
@@ -210,4 +223,21 @@
 
 .boton-negro:hover {
   background-color: #1a1a1a;
+}
+/* icono png en la esquina superior derecha de la tarjeta */
+.sector-icono-esquina {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 50px; /* ajusta este tamano si lo ves muy grande o pequeno */
+  height: 50px;
+  object-fit: contain;
+  z-index: 2; /* asegura que este por encima del filtro oscuro */
+  opacity: 0.9; /* opcional: le da un toque sutil */
+  transition: transform 0.3s ease;
+}
+
+/* pequeno efecto para que el icono se mueva cuando pasas el mouse por la tarjeta */
+.sector-card:hover .sector-icono-esquina {
+  transform: scale(1.1);
 }
