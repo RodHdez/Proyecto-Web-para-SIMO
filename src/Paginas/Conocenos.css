@@ -147,20 +147,14 @@
     min-height: 400px;
 }
 
-/* Placeholder de imagen en la izquierda */
+/* Contenedor de la imagen en la izquierda */
 .valores-imagen {
     flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem;
-}
-
-.valores-imagen-placeholder {
-    width: 100%;
-    height: 300px;
-    background-color: #333;
-    border-radius: 8px;
+    height: 500px; 
+    border-radius: 40px; /* bordes redondeados */
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Lista de valores en la derecha */

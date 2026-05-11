@@ -29,8 +29,6 @@
 
 /* Contenedor del texto y boton dentro de cada slide */
 .slide-content {
-  position: relative;
-    z-index: 1; /* mantiene el texto encima del overlay */
     position: relative;
     z-index: 1;
     color: white;
@@ -103,5 +101,10 @@
 .indicador-individual.active {
     background-color: #FB8103;
     transform: scale(1.4); /* agranda el activo */
-    Height: 56px; /* agranda el activo */
+    height: 56px; /* agranda el activo */
+}
+
+/* ── Contenedor que permite hacer scroll hasta el footer ── */
+.footer-snap-wrapper {
+    scroll-snap-align: end;
 }

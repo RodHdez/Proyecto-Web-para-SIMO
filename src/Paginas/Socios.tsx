@@ -11,7 +11,6 @@ import IconInnovacionContinua from "../assets/IconInnovacionContinua.png";
 
 {/* importacion de imagenes */}
 import imgHeroSocios from "../assets/imgHeroSocios.jpg";
-
 import imgGaleria1 from "../assets/imgGaleria1.png";
 import imgGaleria2 from "../assets/imgGaleria2.png";
 import imgGaleria3 from "../assets/imgGaleria3.png";

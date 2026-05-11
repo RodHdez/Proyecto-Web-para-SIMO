@@ -7,8 +7,7 @@ import slide2 from "../assets/dealHome.jpg";
 import slide3 from "../assets/BombilloHome.jpg";
 import slide4 from "../assets/contactHome.jpg";
 
-
-
+import Footer from "../Componentes/Footer";
 
 // Array con la informacion de cada Slide
 const slides = [
@@ -82,7 +81,7 @@ export default function Home() {
       observers.push(observer);
     });
 
-    // Desconectar todos los observadores al salir (limpieza)
+    // Desconectar todos los observadores al salir
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
@@ -93,51 +92,53 @@ export default function Home() {
 
   return (
     <TransiciondePag>
-
-    {/* Referencia al contenedor para el IntersectionObserver*/}
-    <div className="home-contenedor" ref={containerRef}>
-
-      {/* Loop por cada una de las slides */}
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className="slide"
-          style={{ 
-             backgroundImage: `url(${slide.imagen})`,
-             backgroundSize: "cover",
-             backgroundPosition: "center",
-          }}
-          // Asigna cada slide al elemento respectivo en el array de referencias
-          ref={(el: HTMLDivElement | null) => void (slideRefs.current[index] = el)}
-        >
-          {/* Contenido de cada slide (titulo, descripcion, boton) */}
-          <div className="slide-content">
-            <h1 className="slide-title">{slide.title}</h1>
-            <p className="slide-description">{slide.description}</p>
-            <button
-              className="slide-button"
-              onClick={() => navigate(slide.route)}
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-      ))}
-
-      {/* Botones indicadores al lado derecho */}
-      <div className="slide-indicator">
-        {slides.map((_, index) => (
-          <button
+      {/* Referencia al contenedor para el IntersectionObserver*/}
+      <div className="home-contenedor" ref={containerRef}>
+        {/* Loop por cada una de las slides */}
+        {slides.map((slide, index) => (
+          <div
             key={index}
-            // Agrega la clase "active" al dot de la slide actual
-            className={`indicador-individual ${activeSlide === index ? "active" : ""}`}
-            // Click navega a esa slide
-            onClick={() => scrollToSlide(index)}
-          />
+            className="slide"
+            style={{ 
+                 backgroundImage: `url(${slide.imagen})`,
+                 backgroundSize: "cover",
+                 backgroundPosition: "center",
+            }}
+            // Asigna cada slide al elemento respectivo 
+            ref={(el: HTMLDivElement | null) => void (slideRefs.current[index] = el)}
+          >
+            {/* Contenido de cada slide*/}
+            <div className="slide-content">
+              <h1 className="slide-title">{slide.title}</h1>
+              <p className="slide-description">{slide.description}</p>
+              <button
+                className="slide-button"
+                onClick={() => navigate(slide.route)}
+              >
+                Ver más
+              </button>
+            </div>
+          </div>
         ))}
-      </div>
 
-    </div>
+        {/* Botones indicadores al lado derecho */}
+        <div className="slide-indicator">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              // Agrega la clase "active" al dot de la slide actual
+              className={`indicador-individual ${activeSlide === index ? "active" : ""}`}
+              // Click navega a esa slide
+              onClick={() => scrollToSlide(index)}
+            />
+          ))}
+        </div>
+
+        {/* ─ EL FOOTER AQUI YA FUNKA ─ */}
+        <div className="footer-snap-wrapper">
+          <Footer />
+        </div>
+      </div>
     </TransiciondePag>
   );
 }

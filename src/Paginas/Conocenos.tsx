@@ -2,9 +2,11 @@ import TransiciondePag from "../Componentes/TransiciondePag";
 import Footer from "../Componentes/Footer"; /* importamos el footer aqui */
 import "./Conocenos.css";
 import { useNavigate } from "react-router-dom";
+import PasionPorLaPresicion from "../assets/PasionPorLaPresicion.png";
 
 export default function Conocenos() {
   const navigate = useNavigate();
+  
   return (
     <TransiciondePag>
       <div className="conocenos-contenedor">
@@ -104,10 +106,8 @@ export default function Conocenos() {
 
         {/* seccion valores */}
         <section className="conocenos-valores">
-          {/* imagen placeholder en la izquierda */}
-          <div className="valores-imagen">
-            <div className="valores-imagen-placeholder" />
-          </div>
+          {/* imagen en la izquierda */}
+          <div className="valores-imagen" style={{ backgroundImage: `url(${PasionPorLaPresicion})` }}></div>
 
           {/* lista de valores en la derecha */}
           <div className="valores-lista">
@@ -147,5 +147,5 @@ export default function Conocenos() {
 
       </div>
     </TransiciondePag>
-  )
+  );
 }
