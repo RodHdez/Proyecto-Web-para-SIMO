@@ -5,9 +5,11 @@ import TransiciondePag from "../Componentes/TransiciondePag";
 import Footer from "../Componentes/Footer"; /* importamos el footer aqui */
 import "./Contacto.css";
 
-// Tipos de los campos del formulario
+// Tipos de los campos del formulario (Se agregaron Empresa y Telefono)
 type FormFields = {
   Nombre: string;
+  Empresa: string;
+  Telefono: string;
   Correo: string;
   Descripcion: string;
 };
@@ -41,7 +43,7 @@ export default function Contacto() {
   // Maneja el envio del formulario
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(data);
+    console.log(data); // Aquí enviarás los datos a la base de datos
   };
 
   return (
@@ -72,6 +74,27 @@ export default function Contacto() {
                 placeholder="Tu nombre completo"
               />
               {errors.Nombre && <span className="error">{errors.Nombre.message}</span>}
+            </div>
+
+            {/* Campo Empresa (NUEVO) */}
+            <div className="campo">
+              <label>EMPRESA / INSTITUCIÓN</label>
+              <input
+                {...register("Empresa")}
+                type="text"
+                placeholder="Nombre de su organización"
+              />
+            </div>
+
+            {/* Campo Teléfono (NUEVO) */}
+            <div className="campo">
+              <label>TELÉFONO DE CONTACTO</label>
+              <input
+                {...register("Telefono", { required: "Teléfono requerido" })}
+                type="tel"
+                placeholder="+503 0000-0000"
+              />
+              {errors.Telefono && <span className="error">{errors.Telefono.message}</span>}
             </div>
 
             {/* Campo Correo */}
@@ -187,8 +210,8 @@ export default function Contacto() {
 
         </section>
 
-         {/* el footer al final de la pagina */}
-                <Footer />
+        {/* el footer al final de la pagina */}
+        <Footer />
       </div>
     </TransiciondePag>
   );
