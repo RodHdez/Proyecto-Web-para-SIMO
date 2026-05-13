@@ -42,9 +42,26 @@ export default function Contacto() {
 
   // Maneja el envio del formulario
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(data); // Aquí enviarás los datos a la base de datos
-  };
+  try {
+    const response = await fetch("http://localhost:3001/api/contacto", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+
+    if (result.ok) {
+      // Muestra confirmacion al usuario
+      alert(`✅ Datos enviados correctamente. ID de registro: ${result.id}`);
+    } else {
+      alert("❌ Error al enviar los datos. Intenta de nuevo.");
+    }
+  } catch (error) {
+    alert("❌ No se pudo conectar al servidor.");
+    console.error(error);
+  }
+};
 
   return (
     <TransiciondePag>
