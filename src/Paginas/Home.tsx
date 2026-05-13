@@ -85,6 +85,19 @@ export default function Home() {
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
+  //Cambia de slide automaticamente cada 5 segundos
+   useEffect(() => {
+    const intervalo = setInterval(() => {
+      setActiveSlide((prev) => {
+        const siguiente = (prev + 1) % slides.length;
+        slideRefs.current[siguiente]?.scrollIntoView({ behavior: "smooth" });
+        return siguiente;
+      });
+    }, 5000);
+
+    return () => clearInterval(intervalo);
+  }, []);
+
   // Viaja suavemente a la diapositiva clickeada
   const scrollToSlide = (index: number) => {
     slideRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
