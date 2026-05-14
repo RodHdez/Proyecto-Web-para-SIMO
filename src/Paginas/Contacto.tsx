@@ -43,7 +43,7 @@ export default function Contacto() {
   // Maneja el envio del formulario
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
   try {
-    const response = await fetch("http://localhost:3001/api/contacto", {
+    const response = await fetch("https://simosv.com/contacto.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
